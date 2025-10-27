@@ -1,37 +1,352 @@
-body {
-  font-family: 'Poppins', sans-serif;
+/* =========================
+   ESTILO GENERAL
+========================= */
+* {
   margin: 0;
-  background-color: #ffffff;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
   color: #333;
+  background-color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
+/* =========================
+   COLORES Y VARIABLES
+========================= */
+:root {
+  --verde: #0fa36b;
+  --verde-oscuro: #0c8e5d;
+  --gris-claro: #f5f5f5;
+  --texto: #333;
+  --blanco: #fff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 header {
-  background-color: #0fa36b;
-  color: white;
-  padding: 1rem;
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-nav ul {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar .logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.navbar ul {
   list-style: none;
   display: flex;
   gap: 1rem;
 }
 
-.hero {
-  background-color: #e6f9f0;
-  text-align: center;
-  padding: 4rem 1rem;
+.navbar a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-button {
-  background-color: #0fa36b;
-  color: white;
+.navbar a:hover,
+.navbar a.active {
+  color: #d9ffe6;
+  border-bottom: 2px solid #d9ffe6;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  background: linear-gradient(rgba(15, 163, 107, 0.8), rgba(15, 163, 107, 0.8)),
+    url("../img/fondo.jpg") center/cover no-repeat;
+  color: var(--blanco);
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-turno {
+  background-color: var(--blanco);
+  color: var(--verde);
   border: none;
   padding: 1rem 2rem;
-  border-radius: 8px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-button:hover {
-  background-color: #0c8e5d;
+.btn-turno:hover {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+/* =========================
+   ABOUT PREVIEW
+========================= */
+.about-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+  background-color: var(--gris-claro);
+}
+
+.about-preview img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-preview .about-text {
+  max-width: 500px;
+}
+
+.about-preview h3 {
+  font-size: 1.8rem;
+  color: var(--verde);
+  margin-bottom: 0.8rem;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--verde-oscuro);
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services-preview {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--blanco);
+}
+
+.services-preview h2 {
+  color: var(--verde);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.service-card {
+  background-color: var(--gris-claro);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.service-card h4 {
+  color: var(--verde);
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   CTA (WHATSAPP)
+========================= */
+.cta {
+  background-color: var(--verde);
+  color: var(--blanco);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25d366;
+  color: var(--blanco);
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* =========================
+   FORMULARIO DE TURNO
+========================= */
+.turno-section {
+  max-width: 500px;
+  margin: 3rem auto;
+  background-color: var(--gris-claro);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.turno-section h2 {
+  text-align: center;
+  color: var(--verde);
+  margin-bottom: 1rem;
+}
+
+.turno-section label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.turno-section input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.turno-section button {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: #25d366;
+  color: var(--blanco);
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.turno-section button:hover {
+  background-color: #1ebe5d;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+.contact {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--gris-claro);
+}
+
+.contact h2 {
+  color: var(--verde);
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    background-color: var(--verde);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    text-align: center;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-preview {
+    flex-direction: column;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .turno-section {
+    margin: 2rem 1rem;
+  }
 }
