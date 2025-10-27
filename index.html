@@ -7,11 +7,15 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- ======= HEADER ======= -->
   <header>
-    <nav>
-      <h1>Dr. Gabriel Pérez</h1>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo del doctor" />
+        <h1>Dr. Gabriel Pérez</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="about.html">Sobre mí</a></li>
         <li><a href="services.html">Servicios</a></li>
         <li><a href="contact.html">Contacto</a></li>
@@ -19,23 +23,60 @@
     </nav>
   </header>
 
+  <!-- ======= HERO ======= -->
   <section class="hero">
-    <div class="hero-text">
+    <div class="hero-content">
       <h2>Médico Cirujano</h2>
-      <p>Atención profesional y humana para tu salud.</p>
-      <button onclick="window.location.href='turno.html'">Solicitar turno</button>
+      <p>Atención profesional, humana y personalizada para cada paciente.</p>
+      <button class="btn-turno" onclick="window.location.href='turno.html'">Solicitar turno</button>
     </div>
   </section>
 
+  <!-- ======= PRESENTACIÓN ======= -->
   <section class="about-preview">
-    <img src="img/doctor.jpg" alt="Dr. Gabriel" />
-    <div>
+    <div class="about-img">
+      <img src="img/doctor.jpg" alt="Dr. Gabriel Pérez" />
+    </div>
+    <div class="about-text">
       <h3>Dr. Gabriel Pérez</h3>
-      <p>Más de 15 años de experiencia en cirugía y atención integral al paciente.</p>
-      <a href="about.html" class="btn">Conocer más</a>
+      <p>Más de 15 años de experiencia brindando atención quirúrgica y clínica integral.
+        Comprometido con la salud y el bienestar de cada paciente.</p>
+      <a href="about.html" class="btn-secondary">Conocer más</a>
     </div>
   </section>
 
+  <!-- ======= SERVICIOS DESTACADOS ======= -->
+  <section class="services-preview">
+    <h2>Servicios destacados</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="assets/iconos/consulta.png" alt="Consulta médica" />
+        <h4>Consultas médicas</h4>
+        <p>Diagnóstico y orientación médica personalizada.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/iconos/cirugia.png" alt="Cirugías menores" />
+        <h4>Cirugías menores</h4>
+        <p>Procedimientos quirúrgicos ambulatorios con tecnología moderna.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/iconos/control.png" alt="Control postoperatorio" />
+        <h4>Control postoperatorio</h4>
+        <p>Seguimiento integral y recuperación supervisada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CTA WHATSAPP ======= -->
+  <section class="cta">
+    <h2>¿Querés reservar tu turno ahora?</h2>
+    <p>Podés hacerlo directamente desde WhatsApp, rápido y fácil.</p>
+    <a href="https://wa.me/5491154815519" target="_blank" class="btn-whatsapp">
+      Enviar mensaje por WhatsApp
+    </a>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
   <footer>
     <p>© 2025 Consultorio del Dr. Gabriel Pérez | Todos los derechos reservados</p>
   </footer>
