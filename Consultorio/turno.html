@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Turno - Dr. Gabriel Pérez</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Solicitar Turno</h1>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="turno-form">
+    <h2>Completá tus datos</h2>
+    <form onsubmit="enviarTurno(); return false;">
+      <label>Nombre y apellido</label>
+      <input type="text" id="nombre" required>
+
+      <label>Motivo de consulta</label>
+      <input type="text" id="motivo" required>
+
+      <label>Fecha</label>
+      <input type="date" id="fecha" required>
+
+      <label>Hora</label>
+      <input type="time" id="hora" required>
+
+      <button type="submit">Enviar a WhatsApp</button>
+    </form>
+  </section>
+</body>
+</html>
